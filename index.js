@@ -18,15 +18,12 @@
 	function keyDown(e){
 		e.preventDefault();
 		keys[e.key] = true;
-		// console.log(e.key);
-		// console.log(keys);
+		
 	}
 
 	function keyUp(e){
 		e.preventDefault();
 		keys[e.key] = false;
-		// console.log(e.key);
-		// console.log(keys);
 	}
 
 
@@ -85,7 +82,7 @@
 		// console.log("Hey I am clicked.");
 		let car = document.querySelector('.car');
 		let road = gameArea.getBoundingClientRect();
-		// console.log(road);
+		
 
 		if(player.start){
 
@@ -101,8 +98,7 @@
 			car.style.left = player.x + "px";
 
 			window.requestAnimationFrame(gamePlay);
-			//console.log(player.score++);
-
+			
 			player.score+=1;
 			let ps = player.score - 1;
 			score.innerText = "Score: " + ps;
